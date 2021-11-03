@@ -32,7 +32,7 @@ $(document).ready(function(){
     getStudents();
 });
 // url of api sample rest
-var url = 'http://localhost/website/samplerest/';
+var url = 'http://localhost/ajax-api-app/samplerest/';
 
 // get all student data
 function getStudents() {
