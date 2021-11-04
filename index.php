@@ -1,4 +1,4 @@
 <?php
-header('Location: http://localhost/ajax-api-app/website/index.html');
+header('Location: http://localhost/ajax-api-app/website/login.html');
 exit;
 ?>

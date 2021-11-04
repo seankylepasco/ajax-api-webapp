@@ -6,7 +6,8 @@
 body{
     font-family: Helvetica;
     -webkit-font-smoothing: antialiased;
-    background: rgba( 71, 147, 227, 1);
+    background-color: #0093E9;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 button{
     margin: 5px;
@@ -200,6 +201,10 @@ input{
     border-radius: 10px;
     background-color: rgb(238, 238, 238);
     outline: none;
+}
+.card{
+  background-color: #fff;
+  padding: 10px;
 }
 .center{
     display: flex;
@@ -404,6 +409,7 @@ h2{
         border-bottom: 1px solid #f7f7f9;
     }
     .fl-table tbody tr {
+        font-size: 18px;
         display: table-cell;
     }
     .fl-table tbody tr:nth-child(odd) {

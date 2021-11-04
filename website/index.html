@@ -1,109 +1,115 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="index.css">
-</head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+  </head>
 
-<body>  
-  <br>
-  <br>
-  <!-- Trigger/Open ADD MODAL -->
-  <button id="myBtn" class="button-17">Add Student</button>
-  <br>
-  <br>
-  <div class="table-wrapper">
-    <!-- TABLE -->
-    <table id="studenttable" class="fl-table">
-      <thead>
-        <tr>
-          <th>record no.</th>
-          <th>student no</th>
-          <th>name</th>
-          <th>actions</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-   </table>     
-  </div>
-
-         
-<!-- ADD MODAL -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="close">&times;</span>
-        <h2>Add a New Student</h2>
+  <body>  
+      <div class="card center">
+        <h1 id="username"></h1>
       </div>
+      <div style="float: right;">
+        <button class="button-17" onclick="logout()"><i class="fas fa-sign-out-alt"></i>&nbsp;LOGOUT</button>
+      </div>
+      <!-- Trigger/Open ADD MODAL -->
+      <button id="myBtn" class="button-17">Add Student</button>
       <br>
       <br>
-      <div class="modal-body">
-        <div>
-          <input id="studentno" name="studentno" type="hidden">
-            <label for="firstname">Enter First name</label>
-            <input id="firstname" name="firstname" type="text" placeholder="first name" required>
-            <br>
-            <label for="lastname">Enter Last name</label>
-            <input id="lastname" name="lastname" type="text" placeholder="lastname name" required>
-            <br>
-            <label for="email">Enter email</label>
-            <input id="email" name="email" type="text" placeholder="email" required>
-            <br>
-            <label for="password">Enter password</label>
-            <input id="password" name="password" type="password" placeholder="password" required>
-            <br>
-            <hr>
-            <div class="center">
-              <button class="button-13" type="button" onclick="addstudent()">submit</button>
+      <div class="table-wrapper">
+        <!-- TABLE -->
+        <table id="studenttable" class="fl-table">
+          <thead>
+            <tr>
+              <th>record no.</th>
+              <th>student no</th>
+              <th>name</th>
+              <th>actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+      </table>     
+      </div>
+
+            
+    <!-- ADD MODAL -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Add a New Student</h2>
+          </div>
+          <br>
+          <br>
+          <div class="modal-body">
+            <div>
+              <input id="studentno" name="studentno" type="hidden">
+                <label for="firstname">Enter First name</label>
+                <input id="firstname" name="firstname" type="text" placeholder="first name" required>
+                <br>
+                <label for="lastname">Enter Last name</label>
+                <input id="lastname" name="lastname" type="text" placeholder="lastname name" required>
+                <br>
+                <label for="email">Enter email</label>
+                <input id="email" name="email" type="text" placeholder="email" required>
+                <br>
+                <label for="password">Enter password</label>
+                <input id="password" name="password" type="password" placeholder="password" required>
+                <br>
+                <hr>
+                <div class="center">
+                  <button class="button-13" type="button" onclick="addstudent()">submit</button>
+                </div>
+                <br>
             </div>
-            <br>
+          </div>
         </div>
-      </div>
     </div>
-</div>
 
-<!-- EDIT MODAL -->
-<div id="myModal2" class="modal">
+    <!-- EDIT MODAL -->
+    <div id="myModal2" class="modal">
 
-  <!-- Modal content -->
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="close2" onclick="closeEditModal()">&times;</span>
-        <h2>Edit Student</h2>
-      </div>
-      <br>
-      <br>
-      <div class="modal-body">
-        <div>
-          <label for="Efirstname">Enter First name</label>
-          <input id="Efirstname" name="Efirstname" type="text" placeholder="first name" required>
+      <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close2" onclick="closeEditModal()">&times;</span>
+            <h2>Edit Student</h2>
+          </div>
           <br>
-          <label for="Elastname">Enter Last name</label>
-          <input id="Elastname" name="Elastname" type="text" placeholder="lastname name" required>
           <br>
-          <label for="Eemail">Enter email</label>
-          <input id="Eemail" name="Eemail" type="text" placeholder="email" required>
-          <br>
-          
-          <input id="Epassword" name="Epassword" type="hidden" placeholder="password" required>
-          <input id="Estudentno" name="Estudentno" type="hidden">
-          <input id="Erecno" name="Erecno" type="hidden">
-            <br>
-            <hr>
-            <div class="center">
-              <button class="button-13" type="button" onclick="editStudent()">submit</button>
+          <div class="modal-body">
+            <div>
+              <label for="Efirstname">Enter First name</label>
+              <input id="Efirstname" name="Efirstname" type="text" placeholder="first name" required>
+              <br>
+              <label for="Elastname">Enter Last name</label>
+              <input id="Elastname" name="Elastname" type="text" placeholder="lastname name" required>
+              <br>
+              <label for="Eemail">Enter email</label>
+              <input id="Eemail" name="Eemail" type="text" placeholder="email" required>
+              <br>
+              
+              <input id="Epassword" name="Epassword" type="hidden" placeholder="password" required>
+              <input id="Estudentno" name="Estudentno" type="hidden">
+              <input id="Erecno" name="Erecno" type="hidden">
+                <br>
+                <hr>
+                <div class="center">
+                  <button class="button-13" type="button" onclick="editStudent()">submit</button>
+                </div>
+                <br>
             </div>
-            <br>
+          </div>
         </div>
-      </div>
     </div>
-</div>
 
-</body>
-<!-- FONTAWESOME -->
-<script src="https://kit.fontawesome.com/c4442c2032.js" crossorigin="anonymous"></script>
-<!-- JQUERY -->
-<script src="https://pagecdn.io/lib/jquery/3.2.1/jquery.min.js"></script> 
-<!-- INDEX SCRIPTS -->
-<script src="index.js"></script>
+  </body>
+  <!-- FONTAWESOME -->
+  <script src="https://kit.fontawesome.com/c4442c2032.js" crossorigin="anonymous"></script>
+  <!-- JQUERY -->
+  <script src="https://pagecdn.io/lib/jquery/3.2.1/jquery.min.js"></script> 
+  <!-- INDEX SCRIPTS -->
+  <script src="index.js"></script>
 </html>

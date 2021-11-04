@@ -27,13 +27,14 @@ window.onclick = function(event) {
 var stud_data;
 var studnum_id;
 var edit_data;
+var user;
 // document init functions ready
 $(document).ready(function(){
     getStudents();
+    getUser();
 });
 // url of api sample rest
 var url = 'http://localhost/ajax-api-app/samplerest/';
-
 // get all student data
 function getStudents() {
     $.ajax({
@@ -69,6 +70,35 @@ function getStudents() {
         }
     });
     getLastId();
+}
+// get current student
+function getUser() {
+    // gets user from local storage
+    var x = localStorage.getItem("user");
+    $.ajax({
+        // url student -> gets user
+        url: url+'student/'+x,
+        type: 'POST',
+        dataType: 'JSON',
+        success: function(response){
+            // get payload and make it into stud data
+            user = response.payload;
+            console.log(user)
+            console.log(x)
+            // length of how many students
+            var len = user.length;
+            // for loop each student 
+            for(var i=0; i<len; i++){
+                // each field as variable
+                var recordno = user[i].recno_fld;
+                var studno = user[i].studnum_fld;
+                var fname = user[i].fname_fld;
+                var lname = user[i].lname_fld;
+                // chane that h1 text into the user name
+                $("#username").text(fname+" "+lname);
+            }
+        }
+    });
 }
 // add student
 function addstudent() {
@@ -254,4 +284,9 @@ function getLastId() {
             }
         }
     });
+}
+// logout student
+function logout(){
+    localStorage.removeItem("user");
+    document.location.href = "login.html";
 }
