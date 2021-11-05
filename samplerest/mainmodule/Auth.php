@@ -2,15 +2,12 @@
     class Auth{
         protected $pdo;
         protected $gm;
-    
+
         public function __construct(\PDO $pdo)
         {
             $this->pdo = $pdo;
             $this->gm = new GlobalMethods($pdo);
         }
-
-
-        // password checking
 
         private function check_password($password, $existing_hash){
             $hash = crypt($password, $existing_hash);
@@ -19,10 +16,6 @@
             }
             return false;
         }
-
-
-
-        // password encryption
         
         private function encrypt_password($password_string){
             $hash_format = "$2y$10$";
@@ -31,18 +24,12 @@
             return crypt($password_string, $hash_format . $salt);
         }
 
-
-        // generation key/salt
-
         private function generate_salt($length){
             $urs = md5(uniqid(mt_rand(), true));
             $b64_string = base64_encode($urs);
             $mb64_string = str_replace('+', '.', $b64_string);
             return substr($mb64_string, 0, $length);
         }
-
-
-        // generate token
 
         private function generate_token($id){
             $header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
@@ -54,8 +41,6 @@
             $jwt = $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
             return $jwt;
         }
-
-
 
         public function add_student($received_data){
             $received_data->pword_fld = $this->encrypt_password($received_data->pword_fld);
@@ -112,9 +97,5 @@
             }
             return $this->gm->returnPayload($payload, $remarks, $message, $code);
         }
-
-
-
     }
-
 ?>

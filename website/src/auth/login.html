@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        
+        <div class="row">
+
+            <div class="row-left">
+                <div class="center">
+                    <h1>Welcome!</h1>
+                    <h3>Students Management System</h3>
+                    <button class="button-17" onclick="document.getElementById('id01').style.display='block'">CLICK TO LOGIN</button>
+                </div>
+            </div>
+    
+            <div class="row-right">
+                <img src="../../assets/welcome-astro.jpg" style="width: auto;height: auto;">
+            </div>
+
+        </div>
+
+        <div id="id01" class="modal">
+            <div class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOsAAADXCAMAAADMbFYxAAABO1BMVEX29vZTbnn+tUxBQUH/lwD+/v7SLi35+flJZnL+pybI0NN2Rhj/t0z29vUxMTH2+Ps8PDw0OD3Q0NDNm0/51Z/r6+v/ulM3NzdNaXU6PUH9rjrSKCf+lwD9skT/kwD64OCQkJBtgYp7e3vj4+NCPjfxslX78N769u7///RedX+xQEOZmZlkZGRwcHCioqLZ2dmrq6u8vLybeUZ7ZED8ohR0WTLxrE16RhD9pyfRkj+PWh7Agzf75MH5wG/626750JSPn6j+9d34zYl5i5PKNTasuL7RIB7LPz/209PotrbRTk7Vg4OeSk/LMC9xYWqAWWGLVFtPT09uXEO+kU2SdEjSnlLcwZxIQjXmnjVdTDSPazambSupg0zmo0j5xHvLjTzmqajTX17el5bYcHCXd31cZnCnRUuHmJ+qP0J+waqIAAAK2UlEQVR4nO2d/V8axxbGd9HNAO6yaORFAlEkSEyM6L1UsSJgFdMmTVObpm9p0qRt6v3//4I7Mwv7xuz7DDtL90nyC1nmM999zpxzZhZFEFKlSpUqVapUqVKlilEASFCCULIJxD0xygISKG0cP909uF1ZKVpVaS0RLPSzdLxzUClUKsXiypwqO1LcM6QlCHr0rFioEChnsEsSxUDa2K24cC6PsQAcHxQqrqAYNvkrFnp6UHC3dFmMlVq7vkiTv2IBOKp4R+9SGAtKzwp+SaGKJZBYZ6WNFd+mYtbdjZIkJRJXOva7UnXYQvHgsAuShys9DRK/Om6lcHvYShittBMGVcOt7HaTRBseFeMWdluJScrhAtikSuVQSIa10lFEVKjCbTcJ1oKN6Kho3R7zDwtaAWuNkwqH3MOCA0qsK4WnnMNGzktmWL6dBV16qBCW6zULbmlFsAbb5bf00Cg3ZhVv4yZyFChRdXWF522ttBNoG+dHvEYxaFFHXSke8MnKwFZo7AaPsBFX6xb5ZT6NlQ7D27q1/uiHdfJ/8Wls2NoKQf/7pl3+Dxm2sstfKg65v5mCyhnZCXalFDfanKTd4LbOQOUMkgNs4Zi7IA6cmaygzrBF7oIYHAcKYT10zXIK47jZ7AoSwvOOujrLXyaODuoEW+FsH+szC7uDOsAWn3HGeuTdSBDXqC9n46azSnrmsVy9HXWG5e2p+y0dUCIsX8nJbTvnL3R1yfOwlSOuWJ1SU0BQsrN8nU6QU1Ow0HWG5atzImzTw4POwfK1h7Wn4XCh6wjL1XGi5Vw4mqM67I8mWK62dUa8UQHNWDcCXH36Sd/QFX+IFroW2B9nZ1A8NRNGeV1/SwcUw76dGcvTKbHxyGr9PkXW+ylrvDLaJkasHDXEKWvKmrKmrClrvEpZU9aUNWXlkbXz06MthqxbhZ86atyMWIraueid/bzFjHXr57PeRSduTE0QNZf75dctRqxbv/6Sy3ECC0YQNZerfbFOZJXLJ56HMrKsXWV79IxZ17+ooeF7Ix6W7F4/h1X7bX2eVT55d3p6el72gC2fw6venRB8Xf9tOnx/L25QQVA1W6Eav1fsrPL70zWkL91hy1/iq07fW98MWSu/N6aj90aqEjcraCNWdPNr5TdFK6s8hVhbe+cGW343vcp6SyBr8U25NrW1144dVehMJwNZM/LbR1bW91OItVM31pPT2WUWY+X7j97KGWP4+LPTnok1I7ffW5w5m0Gs2dailVW/6sx6p9qymXUv9hprYc1kLLk0GqsmPDxeIvEnp07GympReRadrslJX9WWSJdNrEiZ+GNY/dBzZpXPSQtx7qrZsj4nXDVj7X2IPYQFdeDCigon8osQmxbYM3wVqQzLOuuAA1bcIjqxwmbij/OzE8/G6eTs/A/yVVNWPppEFTZO6A+ZFTeAHqSuV9W4ycIC2ucM+j1HX3UWH7zOrL3+gId2GEq9bPcgbY3eFscQXq+99iUPrmKpnWEb3nsWrBkYM+1hhxNXkVRV2RsMWaBmhoM9BZsafztsSN3z2rmFkFzm5PTFkIL+dtr0WTNtWGoUniwVMC340KCO2vgABL7CV5O6yYB1k6OsZJI6YMDKS121i0FyKse/kSNLuaBu7AV/S1UT/QXb2OSt4syk7lFGzchcdPxEdSgHcYOLjRxRijqkzDrk1lYFZmKq/T+3WRgJjGga2+DiGY6TVKrGlvnNTEg0jeXbVgH3TrSchbby2kloAtT6CV7bfpNo1ViOa6suarsdDs6+PUUnPSUggpFoRDGM4ATYiops5IMnuc13aTWkDvB8wxcfuZyExaoJDBpRiqzcSA4qhB1G+IE6OTNMRF6aCYTf3cmNZKEi2NC+DgCHB8KuAoNyGGsbZYSaMFZYekLU2cZFUoqNRYraGQVmHSWjhSAIjFyftc+pxvuO1UXqZj3AA2i5X+f2ONhb6ubD1fr0owWeH4Wp1VcfJpx1dbXn/UEKWa714JXJZ11drfcbrn1Uo1/H1y0DK6Tt9cktsiw3+r369KrlYEW49VytZgGWG7Varl43Llka1qm/vVxfU65nxlwmVjsWUUvC6kspazKUsqasy8LqnYTr+N8ysPpTglkVAUibDx/6p4XXbkpJ/JY6AEArP94ZfNXu172B4RX1fvurwc4431KThQtBu5NmNVvNliTp8eVg1M4ZwPV5zFx7NLh8LEkl+I5qc9IFicGFoOP9bFWEqo4lTY8vhyOLw3XdzdEQYWKNtTdl98ddzmkVbY2WJk0NFEuVDEGHtZA2glbHRAL6u6rZ5qTE+dfUIUurWdFQNi/ZpAHbMbEmlndWuTYXgPyVyVKsph0IafvFNunlpvWt1exVnkdaBZM27aTQni4B9frmmgDbzdrfDEM5r3L3IXgFSNBT+1zN2cmM+uDeAwLs3dyNwrRdCXCFKkitu3lPtdkKBNR7BFiVdKsQ7R1XXy8JhEmVTAqDeEJCJcBOyKyQtjrh5uslFSm/7zRPJCLqPKzLCNn9PFB4WLVAGLuRWsuOgWqHzbsPMkbWxg0rdV1NhSF4ZUJ9ZaDaYK+cFsHM2m7Mj6AVAS4z90nCaZZIrtpgS+43DOWoSbwpCqh3XnM0l50XN/esunkx+6+x1x2D9+xOjTFFgVLTGxXC6r4+t/n6XPfVGxXCNuP7/dKgJfqZoik7WWFNqO6ZSb9pYky/YFoBXT/zQ1M0mmIzrAlVavq6aVDx/CZi4M8LJFNTbMCaUedbYceh8ouHVQKgWprib2b56eYb40UfmSlG2CCocILGlv2jzvpRf82hFXaEXWydBS3/ToiWpvjljPXBS/01x1aYqOoiE5QCi02QyUHt61yf9PX6SX9tP+Boiy09vvPmVEbZMeWmYAXHULW5wG5R8tEt2aY3a4q3TfV1loc9WuF5Ze8W1i4GXF/a9KZN8ddGm3jztfaSZytMGG2yoCgGreCTE6sTW8kxik6AgmPAthazxVODLlZNAIP9aWL9E78CvN86r2pzIcaGiWBRz05/mXrEv0Jlpulwi9jhhYpgUW+KX5hYtQ1dM9RwWhQzVvCsqU8OggmvTHn4FTpiDHnrUGZnTBqoDbZNDjXF2+Y93c12yMyExbwxVkAz5NS0k2JTGtYSsRAWVRRZpycQLjFhoab4o4X1Y9BW2Doe4y83BkFbV7P2TZ0/Zn0ZvBW2jMeUNfxqRYJl55PlDOZTyIKjj8cSNsJqFXHqvLaeD4dO6tp4LFcs8H9WQp6cufPH3X8UVHS2ww6W+NgwiP62sf4dbThYxpixCtFsFcXP1xbU688Rx8sy++xXtMyE9a1lvX4bdTh22QlEyiRY31l6xO+iDle9YsVaiowqik9Mvf+T6MNVGX2DKIUQFsXXJl9fRx+OVRCHb9NN+vxcR30eNTOJzDKxEqk/1KVnp+iZCYlRnxjiDIwgPTu9omArOrNjgUpluUL9M/0czD9URmOzYAGN5Soa2YlCZhLRgmXCGr26asJlh0bBQWJUYamkJqjvMev3lEbbZ/HLu+ikJnHaFEduhWdikZyi7udMgmWHTsFBYrGvo5WGRVx2orfCM7F49BzlVM2uJ7Qyk8jmMRatkoP0+gGdgoPEouiAqGcSJn3+H63MBFkZPIuNdgxmEz1UJs86wj5jYq4mfdZox6UMxeDgVKXVNtEW9V2dIgAxy6dEBg1xnlfRR0U//MinGLCmSpUqVapUqVL9u/V/EEOycyoIBG8AAAAASUVORK5CYII=" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="email"><b>Username</b></label>
+                    <input id="email" type="text" placeholder="Enter Username" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input id="password" type="password" placeholder="Enter Password" name="password" required>
+                    <div class="center">
+                        <button class="button-17" type="submit" onclick="login()">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <!-- JQUERY -->
+    <script src="https://pagecdn.io/lib/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="login.js"></script>
+</html>

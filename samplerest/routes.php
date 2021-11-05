@@ -28,7 +28,7 @@ switch($_SERVER['REQUEST_METHOD']){
 
             case 'student':
                 if(count($req)>1){
-                    echo json_encode($get->get_common('students_tbl', "recno_fld = '$req[1]'"));
+                    echo json_encode($get->get_common('students_tbl', "studnum_fld = '$req[1]'"));
                 }
                 else{
                     echo json_encode($get->get_common('students_tbl'));

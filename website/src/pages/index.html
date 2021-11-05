@@ -7,7 +7,7 @@
 
   <body>  
       <div class="card center">
-        <h1 id="username"></h1>
+        <h1 id="username" style="color: rgb(49, 49, 49);"></h1>
       </div>
       <div style="float: right;">
         <button class="button-17" onclick="logout()"><i class="fas fa-sign-out-alt"></i>&nbsp;LOGOUT</button>
@@ -16,25 +16,22 @@
       <button id="myBtn" class="button-17">Add Student</button>
       <br>
       <br>
+      <!-- TABLE -->
       <div class="table-wrapper">
-        <!-- TABLE -->
         <table id="studenttable" class="fl-table">
           <thead>
             <tr>
-              <th>record no.</th>
-              <th>student no</th>
-              <th>name</th>
-              <th>actions</th>
+              <th>No.</th>
+              <th>Student ID</th>
+              <th>Name</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody></tbody>
-      </table>     
+        </table>     
       </div>
-
-            
     <!-- ADD MODAL -->
-    <div id="myModal" class="modal">
-
+    <div id="addmodal" class="modal">
       <!-- Modal content -->
         <div class="modal-content">
           <div class="modal-header">
@@ -69,8 +66,7 @@
     </div>
 
     <!-- EDIT MODAL -->
-    <div id="myModal2" class="modal">
-
+    <div id="editmodal" class="modal">
       <!-- Modal content -->
         <div class="modal-content">
           <div class="modal-header">
@@ -81,13 +77,13 @@
           <br>
           <div class="modal-body">
             <div>
-              <label for="Efirstname">Enter First name</label>
+              <label for="Efirstname">Edit First name</label>
               <input id="Efirstname" name="Efirstname" type="text" placeholder="first name" required>
               <br>
-              <label for="Elastname">Enter Last name</label>
+              <label for="Elastname">Edit Last name</label>
               <input id="Elastname" name="Elastname" type="text" placeholder="lastname name" required>
               <br>
-              <label for="Eemail">Enter email</label>
+              <label for="Eemail">Edit email</label>
               <input id="Eemail" name="Eemail" type="text" placeholder="email" required>
               <br>
               
@@ -97,7 +93,7 @@
                 <br>
                 <hr>
                 <div class="center">
-                  <button class="button-13" type="button" onclick="editStudent()">submit</button>
+                  <button class="button-13" type="button" onclick="editStudent()">save</button>
                 </div>
                 <br>
             </div>

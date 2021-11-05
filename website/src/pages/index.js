@@ -1,7 +1,6 @@
 // ==================== MOAL FUNCTIONS ========================== //
-
 // Get the modal
-var modal = document.getElementById("myModal");
+var modal = document.getElementById("addmodal");
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
@@ -20,9 +19,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
 // ===================== AJAX FUNCTIONS ========================== //
-
 // student data global variable
 var stud_data;
 var studnum_id;
@@ -83,8 +80,6 @@ function getUser() {
         success: function(response){
             // get payload and make it into stud data
             user = response.payload;
-            console.log(user)
-            console.log(x)
             // length of how many students
             var len = user.length;
             // for loop each student 
@@ -95,7 +90,7 @@ function getUser() {
                 var fname = user[i].fname_fld;
                 var lname = user[i].lname_fld;
                 // chane that h1 text into the user name
-                $("#username").text(fname+" "+lname);
+                $("#username").text("Hello "+fname+" "+lname+"!");
             }
         }
     });
@@ -153,7 +148,6 @@ function addstudent() {
         })
         // if failed
         .fail( function( data ) {
-            console.log(data);
         });
     }
 }
@@ -175,7 +169,6 @@ function deleteStudent(id){
     })
     // if failed
     .fail( function( data ) {
-        console.log(data);
     });
 }
 // update a student 
@@ -219,17 +212,16 @@ function editStudent(){
     })
     // if failed
     .fail( function( data ) {
-        console.log(data);
     });
 }
 // Other Functions -----------
 // close add modal
 function closeAddModal(){
-    document.getElementById("myModal").style.display = "none";
+    document.getElementById("addmodal").style.display = "none";
 }
 // open edit modal
 function openEditModal(data){
-    document.getElementById("myModal2").style.display = "block";
+    document.getElementById("editmodal").style.display = "block";
     $.ajax({
         // url student -> gets all students
         url: url+'student/'+data,
@@ -262,7 +254,7 @@ function openEditModal(data){
 }
 // close edit modal
 function closeEditModal(){
-    document.getElementById("myModal2").style.display = "none";
+    document.getElementById("editmodal").style.display = "none";
 }
 // set student number
 function getLastId() {
@@ -288,5 +280,5 @@ function getLastId() {
 // logout student
 function logout(){
     localStorage.removeItem("user");
-    document.location.href = "login.html";
+    document.location.href = "../auth/login.html";
 }

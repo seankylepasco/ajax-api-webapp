@@ -1,22 +1,18 @@
 // Get the modal
 var modal = document.getElementById('id01');
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
-
 // ===================== AJAX FUNCTIONS ========================== //
-
 // document init functions ready
 $(document).ready(function(){
     console.log("hi")
 });
 // url of api sample rest
 var url = 'http://localhost/ajax-api-app/samplerest/';
-
 // login student data
 function login() {
     const email = $("#email").val();
@@ -42,7 +38,7 @@ function login() {
         // set id as local storage
         localStorage.setItem("user", data.payload.id);
         // change the page
-        document.location.href = "index.html";
+        document.location.href = "../pages/index.html";
         // alert message
         alert(data.status.message)
     })
